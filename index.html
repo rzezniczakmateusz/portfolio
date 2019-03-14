@@ -12,7 +12,7 @@
 <body>
     <div class="portfolio">
         <div class="top">
-            <img src="logo1.png" alt="logo" >
+            <img src="logo.png" alt="logo" >
             <header class="toptext">
                 <h1>Mateusz Rzeźniczak</h1>
                 <hr>
@@ -52,37 +52,36 @@
 
             <div class="title skills"onclick="ne('o3')">Skills</div>
                 <div class="text skillstext" id="o3" style="display:none;">
-                    <img alt="css" src="html.png">
+                    <img alt="html" src="html.png">
                     <img alt="css" src="css.png">
-                    <img alt="css" src="js.png">
+                    <img alt="js" src="js.png">
                 </div>
             
             <div class="title contact" onclick="ne('o4')">Contact</div>
                 <div class="text contacttext" id="o4" style="display:none;">
                     <div id="contact-area">       
-                        <form method="post" action="contactengine.php">
-                            <input type="text" name="Name" id="Name" placeholder="Name"/>
+                        <form method="post" action="mail.php">
+                            <input type="text" name="name" placeholder="Name"/>
                             
-                            <input type="text" name="City" id="City" placeholder="City"/>
+                            <input type="text" name="phone" placeholder="Phone number"/>
                 
-                            <input type="text" name="Email" id="Email"  placeholder="Email" />
+                            <input type="text" name="email" placeholder="Email" />
                             
-                            <textarea name="Message" rows="20" cols="20" id="Message"  placeholder="Message"></textarea>
+                            <textarea name="message" rows="20" cols="20"  placeholder="Message"></textarea>
             
-                            <input type="submit" name="submit" value="Submit" class="submit-button" />
+                            <input type="submit" value="Send" class="button">
+                            <input type="reset" value="Clear" class="button">
                         </form>                           
                     <div style="clear: both;"></div>
                 </div>
 
         </div>
     </div>
+    <script type="text/javascript">
+        function ne(o){
+           if(document.getElementById(o).style.display=='') document.getElementById(o).style.display = 'none';
+           else document.getElementById(o).style.display='';
+        }
+     </script>
 </body>
-
-<script type="text/javascript">
-    function ne(o){
-       if(document.getElementById(o).style.display=='') document.getElementById(o).style.display = 'none';
-       else document.getElementById(o).style.display='';
-    }
- </script>
-
 </html>
